@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LeBookClub</title>
+    <title>TheBookClub</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div class='whole-thing'>
   <body>
     <nav>
       <p class="navbar-text pull-right">
@@ -27,9 +27,9 @@
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
     </nav>
+    <div class='main-area'>
     <%= yield %>
+    </div>
   </body>
-  <footer>
-
-  </footer>
+</div>
 </html>

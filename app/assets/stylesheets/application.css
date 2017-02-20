@@ -16,24 +16,40 @@
 
 
 html {
-
 background-color: #fff7cc
+
+}
+
+
+nav {
+
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 
 }
 
 body {
 
-padding: 5%;
+  padding: 2%;
 
 }
 
-nav {
+.whole-thing {
 
-  display: flex;
-  justify-content: space-between;;
-  z-index: 2;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Boger%2C_Sigurdur_Olafsson.jpg/1024px-Boger%2C_Sigurdur_Olafsson.jpg");
 
 }
+
+.main-area {
+
+padding: 10%;
+
+}
+
 
 .alert.alert-success {
 
@@ -45,7 +61,7 @@ nav {
 .alert.alert-danger {
   color: red;
   z-index: 1;
-  
+
 }
 
 img {
