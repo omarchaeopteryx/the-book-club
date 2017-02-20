@@ -4,15 +4,17 @@
 </p>
 
 <p>
-  <strong>Text:</strong>
+  <strong>Notes:</strong>
   <%= @topic.text %>
 </p>
 
 <h2>Comments</h2>
 <%= render @topic.comments %>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+<div id='add-comment-form'>
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %>
-<%= link_to 'Back', topics_path %>
+  <%= link_to 'Edit', edit_topic_path(@topic) %>
+  <%= link_to 'Back', topics_path %>
+</div>

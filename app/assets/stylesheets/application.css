@@ -15,23 +15,33 @@
  */
 
 
+/* Adjust layout generally: */
 html {
-background-color: #fff7cc
+
+  background-color: #fff7cc
 
 }
-
 
 nav {
 
   display: flex;
   justify-content: center;
   z-index: 2;
+  color: #fcfdff;
+  font-size: 3em;
+  font-family: Georgia;
 
 }
 
-body {
+nav a {
 
-  padding: 2%;
+  color: #fcfdff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fcfdff;
 
 }
 
@@ -39,17 +49,22 @@ body {
 
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: auto;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Boger%2C_Sigurdur_Olafsson.jpg/1024px-Boger%2C_Sigurdur_Olafsson.jpg");
 
 }
 
-.main-area {
+.whole-thing a {
 
-padding: 10%;
-
+  color: #fcfdff;
 }
 
+.main-area {
+
+  z-index: 2;
+  padding: 10%;
+
+}
 
 .alert.alert-success {
 
@@ -64,7 +79,18 @@ padding: 10%;
 
 }
 
-img {
-  z-index: 3
+/* Adjust forms specifically: */
+
+#add-comment-form {
+
+  margin-left: 25%;
+  font-size: 1em;
+
+}
+
+#add-comment-form textarea {
+
+  width: 500px;
+  height: 100px;
 
 }
