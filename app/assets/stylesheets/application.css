@@ -28,7 +28,7 @@ nav {
   justify-content: center;
   z-index: 2;
   color: #fcfdff;
-  font-size: 3em;
+  font-size: 1.5em;
   font-family: Georgia;
 
 }
@@ -76,26 +76,39 @@ body {
 
   color: #fcfdff;
   margin: 0;
+  height: auto;
+
 }
 
 .main-area {
 
   z-index: 2;
-  padding: 10%;
-  margin-bottom: 0;
+  padding-top: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 30%;
+  margin:0;
+  height: auto;
 
 }
 
 .alert.alert-success {
 
-  color: green;
-  z-index: 1;
+  color: lightGreen;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  margin-left: 10%;
 
 }
 
 .alert.alert-danger {
+
   color: red;
-  z-index: 1;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  margin-left: 10%;
 
 }
 
@@ -117,7 +130,45 @@ body {
 
 progress {
 
+    display: none;
     position:fixed;
     top:15px;
+
+}
+
+
+/* Adjust index page */
+
+table {
+
+  margin-left: 10%;
+  font-size: 1em;
+  width: 100vh;
+  background-color: hsla(0, 0%, 0%, 0.2);   /* light green with opacity */
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+
+}
+
+td {
+
+  padding-top: 5%;
+
+}
+
+.index-page {
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Adjust show page */
+
+#show-topic {
+
+  background-color: hsla(0, 0%, 40%, 0.3);   /* light green with opacity */
+  padding: 5%;
 
 }

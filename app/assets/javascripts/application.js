@@ -17,7 +17,7 @@
 
 $(document).ready(function() {
 
-  console.log('welcome!')
+  console.log('Once upon a time...')
 
   $(window).scroll(function () {
   var s = $(window).scrollTop(),
@@ -26,6 +26,7 @@ $(document).ready(function() {
         scrollPercent = (s / (d-c)) * 100;
         var position = scrollPercent;
 
+   $("#progressbar").show();
    $("#progressbar").attr('value', position);
 
 });
