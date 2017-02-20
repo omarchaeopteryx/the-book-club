@@ -33,6 +33,24 @@ nav {
 
 }
 
+.home {
+
+  display: flex;
+  justify-content: center;
+
+}
+
+#home-image {
+  margin-left: 16%;
+}
+
+#home-links {
+  /*margin-left: 0%;*/
+  font-size: 2em;
+  margin-bottom: 4%;
+
+}
+
 nav a {
 
   color: #fcfdff;
@@ -57,12 +75,14 @@ body {
 .whole-thing a {
 
   color: #fcfdff;
+  margin: 0;
 }
 
 .main-area {
 
   z-index: 2;
   padding: 10%;
+  margin-bottom: 0;
 
 }
 
