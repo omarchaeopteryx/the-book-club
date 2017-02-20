@@ -20,3 +20,35 @@ html {
 background-color: #fff7cc
 
 }
+
+body {
+
+padding: 5%;
+
+}
+
+nav {
+
+  display: flex;
+  justify-content: space-between;;
+  z-index: 2;
+
+}
+
+.alert.alert-success {
+
+  color: green;
+  z-index: 1;
+
+}
+
+.alert.alert-danger {
+  color: red;
+  z-index: 1;
+  
+}
+
+img {
+  z-index: 3
+
+}

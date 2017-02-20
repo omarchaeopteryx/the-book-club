@@ -1,18 +1,18 @@
-<h1>Behold the topics</h1>
-<%= link_to 'New Topic', new_topic_path %>
+<h1>Discussions!</h1>
+<%= link_to 'New Discussion', new_topic_path %>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Discussion</th>
+    <th>About</th>
   </tr>
 
   <% @topics.each do |topic| %>
     <tr>
       <td><%= topic.title %></td>
       <td><%= topic.text %></td>
-      <td><%= link_to 'Show', topic_path(topic) %></td>
+      <td><%= link_to 'View', topic_path(topic) %></td>
       <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-      <td><%= link_to 'Destroy', topic_path(topic), method: :delete, data: { confirm: 'Are you certain you would like to delete this?' } %>
+      <td><%= link_to 'Remove', topic_path(topic), method: :delete, data: { confirm: 'Are you certain you would like to delete this?' } %>
     </tr>
   <% end %>
 </table>
