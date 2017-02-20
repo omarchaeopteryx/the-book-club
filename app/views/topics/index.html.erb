@@ -1,0 +1,18 @@
+<h1>Behold the topics</h1>
+<%= link_to 'New Topic', new_topic_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @topics.each do |topic| %>
+    <tr>
+      <td><%= topic.title %></td>
+      <td><%= topic.text %></td>
+      <td><%= link_to 'Show', topic_path(topic) %></td>
+      <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+      <td><%= link_to 'Destroy', topic_path(topic), method: :delete, data: { confirm: 'Are you certain you would like to delete this?' } %>
+    </tr>
+  <% end %>
+</table>
