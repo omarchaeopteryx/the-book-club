@@ -114,3 +114,10 @@ body {
   height: 100px;
 
 }
+
+progress {
+
+    position:fixed;
+    top:15px;
+
+}
