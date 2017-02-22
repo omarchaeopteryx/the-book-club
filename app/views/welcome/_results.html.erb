@@ -9,7 +9,8 @@
     <% if @multi_results %>
       <% @multi_results.results.work.each do |item| %>
         <p>
-          <%= item.best_book.title %>,
+          <%= item.best_book.title %>
+          (<%= item.original_publication_year || "N/A" %>),
           <%= item.best_book.author.name %>,
           ID: <%= item.best_book.id %>
         </p>
@@ -17,7 +18,8 @@
     <% end %>
 
     <% if @unique_result %>
-      <%= @unique_result.results.work.best_book.title %>,
+      <%= @unique_result.results.work.best_book.title %>
+      (<%= @unique_result.results.work.original_publication_year || "N/A" %>),
       <%= @unique_result.results.work.best_book.author.name %>,
       ID: <%= @unique_result.results.work.best_book.id %>
     <% end %>

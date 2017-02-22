@@ -17,6 +17,8 @@ class WelcomeController < ApplicationController
       @multi_results = @search_raw
     end
 
+    # p @search_raw.results.first
+
     render :_results
   end
 
