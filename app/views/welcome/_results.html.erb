@@ -1,0 +1,12 @@
+
+<p>Results:</p>
+
+<% if @search1 %>
+  <% @search1.results.work.each do |item| %>
+    <p>
+      <%= item.best_book.id %>,
+      <%= item.best_book.title %>,
+      <%= item.best_book.author.name %>
+    </p>
+  <% end %>
+<% end %>
