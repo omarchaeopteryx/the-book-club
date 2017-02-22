@@ -1,0 +1,28 @@
+
+<section>
+  <h2>Query:</h2>
+  <p><%= if @search_raw then @search_raw.query end %></p>
+</section>
+
+<section>
+  <h2>Results:</h2>
+    <% if @multi_results %>
+      <% @multi_results.results.work.each do |item| %>
+        <p>
+          <%= item.best_book.title %>,
+          <%= item.best_book.author.name %>,
+          ID: <%= item.best_book.id %>
+        </p>
+      <% end %>
+    <% end %>
+
+    <% if @unique_result %>
+      <%= @unique_result.results.work.best_book.title %>,
+      <%= @unique_result.results.work.best_book.author.name %>,
+      ID: <%= @unique_result.results.work.best_book.id %>
+    <% end %>
+</section>
+
+<div>
+<a href="/">Back</a>
+</div>
