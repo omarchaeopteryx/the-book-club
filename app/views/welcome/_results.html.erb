@@ -23,6 +23,10 @@
       <%= @unique_result.results.work.best_book.author.name %>,
       ID: <%= @unique_result.results.work.best_book.id %>
     <% end %>
+
+    <% if @error_message_for_search %>
+      <h4><%= @error_message_for_search %>.
+    <% end %>
 </section>
 
 <div clas='footer-nav'>
