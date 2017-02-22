@@ -5,6 +5,6 @@
 <img id='home-image' class='home' src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Moby_Dick_p510_illustration.jpg">
 
 
-<img src="<%= @search2.image_url %>">
+<img src="<%= if @search2 then @search2.image_url end %>">
 
 <%= render 'welcome/results' %>

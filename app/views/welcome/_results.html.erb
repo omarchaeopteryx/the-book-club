@@ -1,12 +1,17 @@
+<h2>Results:</h2>
 
-<p>Results:</p>
-
-<% if @search1 %>
-  <% @search1.results.work.each do |item| %>
+<% unless @search_raw.results.first[1].count == 9 %>
+  <% @search_raw.results.work.each do |item| %>
     <p>
-      <%= item.best_book.id %>,
       <%= item.best_book.title %>,
+      <%= item.best_book.id %>,
       <%= item.best_book.author.name %>
     </p>
   <% end %>
+<% end %>
+
+<% if @search_raw.results.first[1].count == 9 %>
+  <%= @search_raw.results.work.best_book.title %>
+  <%= @search_raw.results.work.best_book.author.name %>
+  <%= @search_raw.results.work.best_book.id %>
 <% end %>
