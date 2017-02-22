@@ -10,10 +10,12 @@ class WelcomeController < ApplicationController
     @search_raw = client.search_books(params[:search]) # Refactor so user input dictates this.
 
     # NOTE: the number of parameters per book is 9; therefore view page criterion is 9; CHECK for updates is data structure changes.
-    
-    # if @search_raw.results.count == 1
-    #   @search_unique = @search_raw
-    # end
+
+    if @search_raw.results.first[1].count == 9
+      @unique_result = @search_raw
+    else
+      @multi_results = @search_raw
+    end
 
     render :_results
   end

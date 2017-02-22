@@ -1,7 +1,7 @@
 <h2>Results:</h2>
 
-<% unless @search_raw.results.first[1].count == 9 %>
-  <% @search_raw.results.work.each do |item| %>
+<% if @multi_results %>
+  <% @multi_results.results.work.each do |item| %>
     <p>
       <%= item.best_book.title %>,
       <%= item.best_book.id %>,
@@ -10,8 +10,8 @@
   <% end %>
 <% end %>
 
-<% if @search_raw.results.first[1].count == 9 %>
-  <%= @search_raw.results.work.best_book.title %>
-  <%= @search_raw.results.work.best_book.author.name %>
-  <%= @search_raw.results.work.best_book.id %>
+<% if @unique_result %>
+  <%= @unique_result.results.work.best_book.title %>
+  <%= @unique_result.results.work.best_book.author.name %>
+  <%= @unique_result.results.work.best_book.id %>
 <% end %>
