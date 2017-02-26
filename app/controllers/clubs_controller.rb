@@ -10,6 +10,7 @@ class ClubsController < ApplicationController
   end
 
   def edit
+    # Add membership validation here before letting users edit.
     @club = Club.find(params[:id])
   end
 
@@ -28,6 +29,7 @@ class ClubsController < ApplicationController
   end
 
   def update
+    # Add membership validation here before letting users edit.
     @club = Club.find(params[:id])
 
     if @club.update(club_params)
@@ -38,6 +40,7 @@ class ClubsController < ApplicationController
   end
 
   def destroy
+    # Add membership validation here before letting users edit.
     @club = Club.find(params[:id])
     @club.destroy
     redirect_to clubs_path
@@ -45,6 +48,6 @@ class ClubsController < ApplicationController
 
 private
   def club_params
-    params.require(:club).permit(:title, :text)
+    params.require(:club).permit(:name, :description)
   end
 end
