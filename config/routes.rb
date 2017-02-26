@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :clubs # do
+  #   resources :reading_lists
+  # end
+
 end
