@@ -11,7 +11,8 @@
   <body>
     <nav>
       <p class="navbar-text pull-right">
-      <a href="/topics">The Book Club</a> |
+      <a href="/clubs">Clubs</a> |
+      <a href="/topics">Forum</a> |
       <% if user_signed_in? %>
         <%= link_to 'Profile', edit_user_registration_path, :class => 'navbar-link' %> |
         <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>

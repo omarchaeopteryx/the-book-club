@@ -1,0 +1,25 @@
+<h1 class='index-page'>Book Clubs!</h1>
+<div class='index-page'>
+  <%= link_to 'Start A New One', new_club_path %>
+</div>
+<br>
+<table>
+  <tr>
+    <th>Club</th>
+    <th>Description</th>
+  </tr>
+
+  <% @clubs.each do |club| %>
+    <tr>
+      <td><%= club.name %></td>
+      <td><%= club.description %></td>
+      <td><%= link_to 'View', club_path(club) %></td>
+      <td><%= link_to 'Edit', edit_club_path(club) %></td>
+      <td><%= link_to 'Remove', club_path(club), method: :delete, data: { confirm: 'Are you certain you would like to delete this?' } %>
+    </tr>
+  <% end %>
+</table>
+
+<div class='footer-nav'>
+<a href="/">Go to search page</a>
+</div class='footer-nav'>
