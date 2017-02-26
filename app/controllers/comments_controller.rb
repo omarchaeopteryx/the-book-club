@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
-
+  # before_action :authenticate_user!
+  
   def create
     @topic = Topic.find(params[:topic_id])
-    @comment = @topic.comments.create(comment_params)
+    @comment = @topic.comments.create(commenter: current_user.screen_name,body:comment_params["body"])
     redirect_to topic_path(@topic)
   end
 

@@ -210,3 +210,38 @@ td {
                 background-color:#fafafa;
                 color:#207cca;
 }
+
+
+/* Style the forum discussion */
+
+.forum {
+
+  border: 0;
+  margin: 0;
+
+
+}
+
+.forum p {
+
+  display: inline-block;
+
+}
+
+.forum-button {
+  font-size: 0.5em;
+}
+
+.forum-commenter {
+
+  font-size: 1.2em;
+  color: #47c4ff
+
+}
+
+.forum-comment-body {
+
+  font-size: 1em;
+  margin-left: 1%;
+
+}
