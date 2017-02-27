@@ -7,21 +7,31 @@ class MembershipsController < ApplicationController
   def create
     @membership = Membership.new(membership_params)
     @membership.user_id = current_user.id
+    @club = Club.find(params[:club_id])
 
     if @membership.save
-      @success_text = "Success!"
+      @success_text = "Hurrah! Success!"
+      redirect_to(club_path(@club), alert: @success_text)
     else
-      @success_text = "Failure!"
+      @success_text = "Alas. Failure!"
+      redirect_to(clubs_path, alert: @success_text) # They should not see this if things are working correctly; logic is hidding membership button.
     end
-
-    # Check: show the same page or take to a lists page?
-    redirect_to(club_reading_lists_path, alert: "Hurrah, you've succesfully joined!")
   end
 
   def edit
   end
 
+  def show
+    @my_clubs = Membership.where(user_id: current_user.id)
+    render 'show'
+  end
+
   def destroy
+    current_user
+      .memberships
+      .find_by(club_id: params[:id])
+      .destroy
+    redirect_to club_path
   end
 
   def membership_params
