@@ -1,12 +1,33 @@
-<p>
-  <strong>Name:</strong>
-  <%= @club.name %>
-</p>
 
-<p>
-  <strong>About:</strong>
-  <%= @club.description %>
-</p>
+<section>
+  <%= form_for([@club, @membership]) do |f| %>
+  <%= f.submit %>
+  <% end %>
+</section>
+
+<section>
+  <h2>Name:</h2>
+  <p><%= @club.name %></p>
+
+  <h2>Description:</h2>
+  <p><%= @club.description %></p>
+</section>
+
+<section>
+  <h3>Members</h3>
+    <p>
+      <% @members.each do |member| %>
+      <p><%= member.screen_name %></p>
+      <% end %>
+    </p>
+
+  <h3>Reading Lists</h3>
+    </p>
+      <% @reading_lists.each do |list| %>
+      <p><%= list.book.name %> - (<%= list.book.goodreads_ID %>)</p>
+      <% end %>
+    </p>
+</section>
 
 <div class='footer'>
   <%= link_to 'Back', topics_path %>
