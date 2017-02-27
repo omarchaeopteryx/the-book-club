@@ -26,6 +26,10 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find(params[:id])
+    @membership = Membership.new(club_id: params[:id])
+    @members = @club.members
+    @reading_lists = @club.reading_lists
+    render 'show'
   end
 
   def update

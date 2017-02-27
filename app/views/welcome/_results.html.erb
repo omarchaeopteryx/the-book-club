@@ -12,7 +12,7 @@
           <%= item.best_book.title %>
           (<%= item.original_publication_year || "N/A" %>),
           <%= item.best_book.author.name %>,
-          ID: <%= item.best_book.id %>
+          ID: <a href='#'><%= item.best_book.id %></a>
         </p>
       <% end %>
     <% end %>
@@ -21,7 +21,7 @@
       <%= @unique_result.results.work.best_book.title %>
       (<%= @unique_result.results.work.original_publication_year || "N/A" %>),
       <%= @unique_result.results.work.best_book.author.name %>,
-      ID: <%= @unique_result.results.work.best_book.id %>
+      ID: <a href='#'><%= @unique_result.results.work.best_book.id %></a>
     <% end %>
 
     <% if @error_message_for_search %>
