@@ -11,10 +11,14 @@ class MembershipsController < ApplicationController
     p @membership
 
     if @membership.save
-      redirect_to '/'
+      @success_text = "Success!"
     else
-      render 'show'
+      @success_text = "Failure!"
     end
+
+    redirect_to(club_reading_lists_path)
+
+
   end
 
   def edit

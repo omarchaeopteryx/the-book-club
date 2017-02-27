@@ -1,7 +1,13 @@
 
+<div class='error-messages'>
+  <% if @success_text then p @success_text end %>
+</div>
+
 <section>
-  <%= form_for([@club, @membership]) do |f| %>
-  <%= f.submit %>
+  <% unless Membership.where(user_id:current_user.id, club_id: params[:id]).first != nil %>
+    <%= form_for([@club, @membership]) do |f| %>
+    <%= f.submit %>
+    <% end %>
   <% end %>
 </section>
 
