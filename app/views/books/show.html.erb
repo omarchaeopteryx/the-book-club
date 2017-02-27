@@ -1,1 +1,12 @@
-<%= p @book_search_result %>
+
+<h1><%= @book_search_result.title %></h1>
+
+<% @book_search_result.authors.each do |author| %>
+  <h2><%= author[1].name %></h2>
+<% end %>
+
+<img src='<%= @book_search_result.image_url %>'>
+
+<p><%= @book_search_result.description %></p>
+
+<p><%= @book_search_result.id %></p>
