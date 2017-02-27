@@ -1,12 +1,10 @@
 
 <h1><%= @book_search_result.title %></h1>
 
-<% @book_search_result.authors.each do |author| %>
-  <h2><%= author[1].name %></h2>
-<% end %>
+<%= @book_search_result_author %>
 
 <img src='<%= @book_search_result.image_url %>'>
 
-<p><%= @book_search_result.description %></p>
+<p><%= if @book_search_result.description then @book_search_result.description.html_safe end %></p>
 
-<p><%= @book_search_result.id %></p>
+<p>Goodreads ID:<%= @book_search_result.id %></p>
