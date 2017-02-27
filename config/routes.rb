@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   get '/welcome/results', to:'welcome#results'
+
   resources :topics do
     resources :comments
   end
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
   resources :clubs do
     resources :reading_lists, :memberships
   end
+
+  resources :books
 
 end

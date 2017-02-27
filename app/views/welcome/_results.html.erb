@@ -11,17 +11,23 @@
         <p>
           <%= item.best_book.title %>
           (<%= item.original_publication_year || "N/A" %>),
-          <%= item.best_book.author.name %>,
-          ID: <a href='#'><%= item.best_book.id %></a>
+          <%= item.best_book.author.name %>
+
+          <div class='read-more-link'>
+            <%= link_to 'Check it!', book_path(item.best_book.id) %>
+          </div>
         </p>
+
       <% end %>
     <% end %>
 
     <% if @unique_result %>
       <%= @unique_result.results.work.best_book.title %>
       (<%= @unique_result.results.work.original_publication_year || "N/A" %>),
-      <%= @unique_result.results.work.best_book.author.name %>,
-      ID: <a href='#'><%= @unique_result.results.work.best_book.id %></a>
+      <%= @unique_result.results.work.best_book.author.name %>.
+      <div class='read-more-link'>
+        <%= link_to 'Check it!', book_path(@unique_result.results.work.best_book.id) %>
+      </div>
     <% end %>
 
     <% if @error_message_for_search %>
