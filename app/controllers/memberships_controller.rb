@@ -37,7 +37,7 @@ class MembershipsController < ApplicationController
   private
 
   def membership_params
-    params.permit(:clubid, :user_id)
+    params.permit(:club_id, :user_id)
   end
 
 end
