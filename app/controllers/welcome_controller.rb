@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  before_action :authenticate_user!, except: :index
+
   def index
     client = Goodreads::Client.new(api_key: ENV['GR_KEY'], api_secret: ENV['GR_SECRET'])
     # @search2 = client.book("18512") # <--Text example: LOTR by Goodreads ID.
