@@ -34,8 +34,10 @@ class MembershipsController < ApplicationController
     redirect_to club_path
   end
 
+  private
+
   def membership_params
-    params.permit(:club_id, :user_id)
+    params.permit(:clubid, :user_id)
   end
 
 end

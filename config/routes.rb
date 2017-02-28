@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   end
 
   resources :clubs do
-    resources :reading_lists, :memberships
+    :memberships # FIX?
   end
+
+  resources :reading_lists
 
   resources :books
 
