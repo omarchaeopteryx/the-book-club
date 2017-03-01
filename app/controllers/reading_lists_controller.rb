@@ -6,14 +6,14 @@ class ReadingListsController < ApplicationController
 
   def new
 
-    @book = Book.new(goodreads_ID: params[:book_id])
+    @book = Book.new(goodreads_id: params[:book_id])
 
     @book.name = get_goodreads_title(params[:book_id])
 
     p @book
 
     @reading_list = ReadingList.new
-    if Book.exists?(goodreads_ID: params[:book_id])
+    if Book.exists?(goodreads_id: params[:book_id])
       p "OK - already in database"
     else
       @book.save
