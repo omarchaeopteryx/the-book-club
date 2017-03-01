@@ -8,8 +8,8 @@ class BooksController < ApplicationController
     @book_search_result = client.book(params[:id])
 
     # Preparing data for making a new book-club join via reading-list - FIX:
-    @book = Book.new(goodreads_ID: params[:id])
-    @reading_list = ReadingList.new(book_id: @book.goodreads_ID)
+    @book = Book.new(goodreads_id: params[:id])
+    @reading_list = ReadingList.new(book_id: @book.goodreads_id)
 
     # Extracting options for drop-down menu through logic:
     # @my_memberships = Membership.where(user_id: current_user.id)
