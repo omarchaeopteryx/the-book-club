@@ -14,6 +14,18 @@ class NotesController < ApplicationController
 
   def index
 
+    @all_notes = Note.where(book_id: params[:book_id])
+
+    ## MUST ALSO ADD A CHECK HERE SO THAT IT'S ONLY TEAMS WHICH YOU ARE A COMPANY OF.
+
+    # @only_my_notes = Note.where(book_id: params[:book_id], user_id: get_current_user_id)
+
+    # @only_my_clubs_notes
+
+    @all_notes.order('page_number DESC')
+
+    render 'index'
+
   end
 
   def create
@@ -25,17 +37,21 @@ class NotesController < ApplicationController
 
     if @new_note.save
       p "created successfully!"
-      redirect_to(new_book_note_path) and return
+      redirect_to(book_notes_path(params[:book_id]))
     else
       p "oops, sth is up."
+      redirect_to(new_book_notes_path)
     end
 
-    redirect_to(new_book_note_path) and return
     p params
 
   end
 
   private
+
+  def get_current_user_id
+    return current_user.id
+  end
 
   def note_params
     # params.require(:note).permit(:page_number, :body) # FIX?

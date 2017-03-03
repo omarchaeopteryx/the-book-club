@@ -1,0 +1,13 @@
+<H2>Here are your team's notes!</h2>
+
+<% if @all_notes %>
+
+  <% @all_notes.each do |note| %>
+
+    <p><%= note.page_number %></p>
+    <p> <%= note.body %></p>
+
+  <% end %>
+
+
+<% end %>
