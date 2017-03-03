@@ -1,8 +1,14 @@
-<h1 class='home'>Welcome to the Book Club</h1>
+<h1 class='home-title'>Welcome.</h1>
+
+<p>To get started, check out the Book Club page to start or join a book club! Use this search form to find a book, and add it to your club's Reading List. From there, you and your friends add notes on the notes page and save them for your discussions.</p>
+
 <%= render 'welcome/form' %>
 
-<div id='home-links' class='home'><%= link_to 'See the topics', controller: 'topics' %></div>
-<img id='home-image' class='home' src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Moby_Dick_p510_illustration.jpg">
+<div class='home-links'>
+  <a class='button' href='topics/'>See the Forum</a>
+</div>
+<div class='home-links'>
+  <a class='button' href='clubs/'>See the Clubs</a>
+</div>
 
-
-<img src="<%= if @search2 then @search2.image_url end %>">
+<img id='home-image' class='home-image' src="https://upload.wikimedia.org/wikipedia/commons/0/02/HMCoSecondEdHobbits.jpg">
