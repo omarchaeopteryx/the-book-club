@@ -5,7 +5,7 @@
   <% @all_notes.each do |note| %>
 
     <p><%= note.page_number %></p>
-    <p> <%= note.body %></p>
+    <p><%= note.user.screen_name %>: <%= note.body %></p>
 
   <% end %>
 
