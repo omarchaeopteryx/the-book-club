@@ -22,14 +22,31 @@ html {
 
 }
 
-nav {
-
+#header {
+  background-color: #465a7a;
   display: flex;
   justify-content: center;
-  z-index: 2;
-  color: #fcfdff;
+  flex: auto;
   font-size: 1.5em;
   font-family: Georgia;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#header a:hover {
+  color: lightBlue;
+}
+
+nav {
+
+  /*display: flex;
+  justify-content: center;*/
+  /*z-index: 2;
+  color: #fcfdff;
+  font-size: 1.5em;
+  font-family: Georgia;*/
 
 }
 
