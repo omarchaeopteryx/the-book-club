@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :memberships
   has_many :clubs, through: :memberships
+  has_many :notes
+  has_many :books, through: :notes
 end

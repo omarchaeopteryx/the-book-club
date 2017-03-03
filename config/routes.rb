@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   resources :reading_lists
 
-  resources :books
+  resources :books do
+    resources :notes
+  end
 
+  # do we need to nest this within books? What is best?
+  # resources :pages
 end

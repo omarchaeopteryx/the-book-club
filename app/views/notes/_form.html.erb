@@ -1,0 +1,13 @@
+
+<%= form_for(@note) do |f| %>
+
+<%= f.label :page %>
+<%= f.number_field :number %>
+  <%= f.fields_for @note do |notes_form| %>
+  <%= notes_form.label :your_thoughts %><br>
+  <%= notes_form.text_area :body %>
+  <% end %>
+
+  <%= f.submit %>
+
+<% end %>

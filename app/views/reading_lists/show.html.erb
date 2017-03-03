@@ -9,6 +9,7 @@
   <p>
     <%= @current_list.book.name %>
   </p>
+
 <h3>Marked pages:</h3>
 
 <% @current_book_marked_pages.each do |page| %>
@@ -16,3 +17,7 @@
   <%= page.number %>
 
 <% end %>
+
+<h3>Leave a note:</h3>
+
+<%= link_to 'leave a note', new_book_note_path(@current_list.book.id) %>
