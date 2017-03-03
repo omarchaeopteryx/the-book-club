@@ -45,7 +45,7 @@ class ReadingListsController < ApplicationController
     # This will be the main hub of book-note-user-saving activity.
     @current_list = ReadingList.find_by_id(params[:id])
     @current_club = @current_list.club
-    @current_book_marked_pages = @current_list.book.pages
+    @current_book_notes = @current_list.book.notes
 
   end
 

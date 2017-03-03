@@ -2,13 +2,12 @@ class NotesController < ApplicationController
 
   def new
 
-    @page = Page.create(book_id: params[:book_id])
-    @book = Book.find_by_id(params[:book_id])
+    # @page = Page.create(book_id: params[:book_id])
+    @book = Book.find(params[:book_id])
     @current_user_id = current_user.id
-    @note = Note.new(page_id: @page.id, user_id: @curent_user_id)
+    @note = Note.new(book_id: params[:book_id], user_id: @curent_user_id)
 
     p "new items:"
-    p @page
     p @note
 
   end
@@ -18,7 +17,20 @@ class NotesController < ApplicationController
   end
 
   def create
-    p "Hit create"
+
+    current_user_id = current_user.id
+    current_note_page = params[:note][:page_number].to_i
+
+    @new_note = Note.new(body: params[:body], page_number: current_note_page, body: params[:note][:body], book_id: params[:book_id], user_id: current_user_id)
+
+    if @new_note.save
+      p "created successfully!"
+      redirect_to(new_book_note_path) and return
+    else
+      p "oops, sth is up."
+    end
+
+    redirect_to(new_book_note_path) and return
     p params
 
   end
@@ -26,6 +38,6 @@ class NotesController < ApplicationController
   private
 
   def note_params
-    params.require(:note).permit(:page, :body, :book_id, :current_user_id) # FIX?
+    # params.require(:note).permit(:page_number, :body) # FIX?
   end
 end
