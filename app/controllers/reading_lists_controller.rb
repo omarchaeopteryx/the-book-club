@@ -1,4 +1,5 @@
 class ReadingListsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @reading_list = ReadingList.all
@@ -41,8 +42,12 @@ class ReadingListsController < ApplicationController
   end
 
   def show
-    @current_club = Club.find(params[:id])
-    @current_list = ReadingLists.where(club_id:params[:id])
+    # Something to think about: which/whose notes do we allow to be shown?
+    # This will be the main hub of book-note-user-saving activity.
+    @current_list = ReadingList.find_by_id(params[:id])
+    @current_club = @current_list.club
+    @current_book_notes = @current_list.book.notes
+
   end
 
   def edit

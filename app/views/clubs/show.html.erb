@@ -30,13 +30,10 @@
         <% end %>
       <% end %>
     </p>
+</section>
 
-  <h3>Reading Lists</h3>
-    </p>
-      <% @reading_lists.each do |list| %>
-      <p><%= list.book.name %> - <a href='/books/<%=list.book.goodreads_id%>'>(<%= list.book.goodreads_id %>)</a></p>
-      <% end %>
-    </p>
+<section>
+ <%= render 'reading_lists/index' %>
 </section>
 
 <div class='footer'>

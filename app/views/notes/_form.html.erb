@@ -1,0 +1,16 @@
+
+<%= form_for ([@book, @note]) do |f| %>
+  <p>
+    <%= f.label :your_thoughts %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :page %><br>
+    <%= f.number_field :page_number %>
+    <%= hidden_field_tag(:book_id, @book.id) %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

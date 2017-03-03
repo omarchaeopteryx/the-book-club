@@ -1,0 +1,8 @@
+<h3>Reading Lists</h3>
+  </p>
+    <% @reading_lists.each do |list| %>
+    <p><%= list.book.name %> - <a href='/books/<%=list.book.goodreads_id%>'>(<%= list.book.goodreads_id %>)</a></p>
+    <p><%= link_to 'see team summary', reading_list_path(list) %></p>
+    <p><%= link_to 'see all book notes', book_notes_path(list.book.goodreads_id) %></p>
+    <% end %>
+  </p>

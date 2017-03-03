@@ -1,0 +1,13 @@
+<h2>Here are this book's notes!</h2>
+<h3><%= @current_book.name %></h3>
+  <%= link_to 'Leave a new note!', new_book_note_path(@current_book) %>
+
+<% if @all_notes %>
+
+  <% @all_notes.each do |note| %>
+
+    <p><%= note.page_number %></p>
+    <p><%= note.user.screen_name %>: <%= note.body %></p>
+
+  <% end %>
+<% end %>

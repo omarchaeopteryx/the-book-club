@@ -1,4 +1,22 @@
 <h2>Reading List</h2>
-<h3>TEST</h3>
-<p>Our club: <%= @current_club %>
-<p>Our list of books: <%= @current_list %></p>
+
+<h3>Current club</h3>
+  <p>
+    <%= @current_club.name %>
+  </p>
+
+<h3>Current book</h3>
+  <p>
+    <%= @current_list.book.name %>
+  </p>
+
+<h3>Marked pages:</h3>
+
+<% @current_book_notes.each do |note| %>
+
+  <%= note.page_number %>
+
+<% end %>
+
+<h3>Leave a note:</h3>
+<%= link_to 'leave a note', new_book_note_path(@current_list.book.id) %>
