@@ -1,5 +1,7 @@
 <H2>Here are your team's notes!</h2>
 
+  <%= link_to 'leave a note', new_book_note_path(@current_book) %>
+
 <% if @all_notes %>
 
   <% @all_notes.each do |note| %>

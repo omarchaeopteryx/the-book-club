@@ -15,7 +15,7 @@ class NotesController < ApplicationController
   def index
 
     @all_notes = Note.where(book_id: params[:book_id])
-
+    @current_book = Book.find(params[:book_id])
     ## MUST ALSO ADD A CHECK HERE SO THAT IT'S ONLY TEAMS WHICH YOU ARE A COMPANY OF.
 
     # @only_my_notes = Note.where(book_id: params[:book_id], user_id: get_current_user_id)
@@ -40,7 +40,8 @@ class NotesController < ApplicationController
       redirect_to(book_notes_path(params[:book_id]))
     else
       p "oops, sth is up."
-      redirect_to(new_book_notes_path)
+      flash[:notice] = @new_note.errors.full_messages.first
+      redirect_to(new_book_note_path)
     end
 
     p params
@@ -48,6 +49,10 @@ class NotesController < ApplicationController
   end
 
   private
+
+  def get_current_book_id
+    return params[:book_id]
+  end
 
   def get_current_user_id
     return current_user.id
