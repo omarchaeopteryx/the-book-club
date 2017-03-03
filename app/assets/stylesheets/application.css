@@ -27,7 +27,7 @@ html {
   display: flex;
   justify-content: center;
   flex: auto;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: Georgia;
 }
 
@@ -39,15 +39,33 @@ html {
   color: lightBlue;
 }
 
-nav {
+#header-head {
 
-  /*display: flex;
-  justify-content: center;*/
-  /*z-index: 2;
-  color: #fcfdff;
-  font-size: 1.5em;
-  font-family: Georgia;*/
+  padding-top: 2%;
+  background-color: #465a7a;
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  font-size: 2.2em;
+  font-family: Georgia;
 
+}
+
+#header-head a {
+  text-decoration: none;
+}
+
+#header-head a:hover {
+  color: darkBlue;
+}
+
+#footer-nav {
+  background-color: #465a7a;
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  /*font-size: 1.5em;*/
+  font-family: Georgia;
 }
 
 .home {
