@@ -1,20 +1,20 @@
 
 <section>
   <h2>Query:</h2>
-  <p><%= if @search_raw then @search_raw.query end %></p>
+  <p>" <%= if @search_raw then @search_raw.query end %> "</p>
 </section>
 
-<section>
+<section class='results-area'>
   <h2>Results:</h2>
     <% if @multi_results %>
       <% @multi_results.results.work.each do |item| %>
-        <p>
+        <p class='results-text'>
           <%= item.best_book.title %>
           (<%= item.original_publication_year || "N/A" %>),
           <%= item.best_book.author.name %>
 
           <div class='read-more-link'>
-            <%= link_to 'Check it!', book_path(item.best_book.id) %>
+            <%= link_to 'Check it!', book_path(item.best_book.id), class: 'button' %>
           </div>
         </p>
 
@@ -36,5 +36,5 @@
 </section>
 
 <div clas='footer-nav'>
-  <a href="/">Back</a>
+  <a class='button' href="/">Back</a>
 </div>

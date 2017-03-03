@@ -173,13 +173,14 @@ body {
 
 .new-form {
   margin-left: auto;
-  height: 100vh;
+  height: auto;
   /*width: 100vh;*/
 }
 
 form {
   width: 100vh;
   font-size: 1.2em;
+  height: auto;
 }
 
 
@@ -193,6 +194,19 @@ textarea {
 
   width: 500px;
   height: 100px;
+}
+
+/* Styling search results page */
+
+.results-text {
+  size: 1.5em;
+  color: eggshell;
+  text-shadow: 2px 2px #a38c0d;
+}
+
+.results-area {
+  /*background-color: lightgray;*/
+
 }
 
 /* Styling alerts/notifications */
@@ -353,4 +367,25 @@ td {
   font-size: 1em;
   margin-left: 1%;
 
+}
+
+/* Styling club show page */
+
+.reading-list-item {
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.button-book {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: gray;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
 }

@@ -1,6 +1,6 @@
-<p>Add book to reading list</p>
+<h3>Add book to reading list:</h3>
 
-<%= @my_clubs.inspect %>
+<% @my_clubs.inspect %>
 
 <%= form_for @reading_list, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
   <%= hidden_field_tag(:book_id, params[:book_id]) %>
