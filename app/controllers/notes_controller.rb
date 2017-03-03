@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  before_action :authenticate_user!
 
   def new
 
@@ -52,6 +53,12 @@ class NotesController < ApplicationController
 
   def get_current_book_id
     return params[:book_id]
+  end
+
+  def get_goodreads_title(id = get_current_book_id)
+    client = Goodreads::Client.new #(api_key: ENV['GR_KEY'], api_secret: ENV['GR_SECRET'])
+    title = client.book(id.to_s).title
+    return title
   end
 
   def get_current_user_id

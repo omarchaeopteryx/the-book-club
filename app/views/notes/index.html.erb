@@ -1,6 +1,6 @@
-<H2>Here are your team's notes!</h2>
-
-  <%= link_to 'leave a note', new_book_note_path(@current_book) %>
+<h2>Here are this book's notes!</h2>
+<h3><%= @current_book.name %></h3>
+  <%= link_to 'Leave a new note!', new_book_note_path(@current_book) %>
 
 <% if @all_notes %>
 
@@ -10,6 +10,4 @@
     <p><%= note.user.screen_name %>: <%= note.body %></p>
 
   <% end %>
-
-
 <% end %>

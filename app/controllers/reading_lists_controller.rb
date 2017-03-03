@@ -1,4 +1,5 @@
 class ReadingListsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @reading_list = ReadingList.all
