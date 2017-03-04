@@ -3,10 +3,18 @@
 
 <% if @all_notes %>
 
+  <table>
+    <tr>
+      <th>page</th>
+      <th>note</th>
+
   <% @all_notes.each do |note| %>
-
-    <p><%= note.page_number %></p>
-    <p><%= note.user.screen_name %>: <%= note.body %></p>
-
+  <tr>
+    <td><%= note.page_number %></td>
+    <td><%= note.user.screen_name %>: <%= note.body %></td>
+  </tr>
   <% end %>
+
+
+</table>
 <% end %>
