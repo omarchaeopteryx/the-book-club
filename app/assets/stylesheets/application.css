@@ -20,35 +20,112 @@ html {
 
   background-color: #fff7cc
 
+
 }
 
-nav {
+body {
 
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  color: #fcfdff;
-  font-size: 1.5em;
   font-family: Georgia;
 
 }
 
-.home {
+#header {
 
+  font-size: 1em;
+  font-family: Georgia;
+  background-color: #465a7a;
+  display: flex;
+  justify-content: center;
+  flex: auto;
+
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#header a:hover {
+  color: lightBlue;
+}
+
+#header-head {
+
+  padding-top: 2%;
+  background-color: #465a7a;
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  font-size: 2.2em;
+  font-family: Georgia;
+
+}
+
+#header-head a {
+  text-decoration: none;
+}
+
+#header-head a:hover {
+  color: darkBlue;
+}
+
+#footer-nav {
+  background-color: #465a7a;
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  font-size: 0.75em;
+  font-family: Georgia;
+}
+
+.footer-nav {
+
+  padding-top: 2%;
+  display: flex;
+}
+
+.button {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.button:hover {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#home-image {
+
+  width: 100vh;
+  height: 50vh;
+  margin: 0;
+  padding: 10%;
   display: flex;
   justify-content: center;
 
 }
 
-#home-image {
-  margin-left: 16%;
+.home-links {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
 }
 
-#home-links {
-  /*margin-left: 0%;*/
-  font-size: 2em;
-  margin-bottom: 4%;
+.home-links a {
 
+  /*display: flex;
+  justify-content: center;*/
+  padding: 2%;
 }
 
 nav a {
@@ -91,6 +168,48 @@ body {
   height: auto;
 
 }
+
+/* Styling new thread form */
+
+.new-form {
+  margin-left: auto;
+  height: auto;
+  /*width: 100vh;*/
+}
+
+form {
+  width: 100vh;
+  font-size: 1.2em;
+  height: auto;
+}
+
+
+input {
+
+  /*width: 500px;*/
+
+}
+
+textarea {
+
+  width: 500px;
+  height: 100px;
+}
+
+/* Styling search results page */
+
+.results-text {
+  size: 1.5em;
+  color: eggshell;
+  text-shadow: 2px 2px #a38c0d;
+}
+
+.results-area {
+  /*background-color: lightgray;*/
+
+}
+
+/* Styling alerts/notifications */
 
 .alert.alert-success {
 
@@ -248,4 +367,25 @@ td {
   font-size: 1em;
   margin-left: 1%;
 
+}
+
+/* Styling club show page */
+
+.reading-list-item {
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.button-book {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: gray;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
 }

@@ -5,10 +5,10 @@
 
 <img src='<%= @book_search_result.image_url %>'>
 
-<p><%= if @book_search_result.description then @book_search_result.description.html_safe end %></p>
+<p class='results-text'><%= if @book_search_result.description then @book_search_result.description.html_safe end %></p>
 
-<p>Goodreads ID:<%= @book_search_result.id %></p>
+<p class='results-text'>Goodreads ID:<%= @book_search_result.id %></p>
 
-<%= link_to "Add to reading list", { :controller => "reading_lists", :action => "new", :book_id => @book_search_result.id } %>
+<%= link_to "Add to reading list", { :controller => "reading_lists", :action => "new", :book_id => @book_search_result.id }, class: 'button' %>
 
 </div>

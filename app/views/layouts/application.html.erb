@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Book Club</title>
+    <title>Ye Olde Book Club</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,10 @@
   </head>
   <div class='whole-thing'>
   <body>
-    <nav>
+    <nav id='header-head'>
+      <a href='/'>Ye Olde Book Club</a>
+    </nav>
+    <nav id='header'>
       <p class="navbar-text pull-right">
       <a href='/'>Search</a> |
       <a href="/clubs">Clubs</a> |
@@ -36,4 +39,7 @@
     </div>
   </body>
 </div>
+<footer id='footer-nav'>
+  <p>(c) 2017, book club friends, ink. </p>
+</footer id='footer-nav'>
 </html>
