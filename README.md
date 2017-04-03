@@ -1,11 +1,18 @@
-Coming soon!
+Welcome to the Book Club! On this website, you can store your reading notes and histories with your friends.
 
-Current user stories include:
+![image](https://docs.google.com/drawings/d/1IrVSSVh04BEscCZH4iH7VjP4QHJrvV8488sZ3kJmHJI/pub?w=962&h=661)
 
-   * Searching for a book and reading about it
-   * Joining or starting your very own book club
-   * Adding a book to your club's reading list
-   * Saving your annoted notes and page numbers
+To get started:
 
-Made by @omarcheatoperyx, 2017
+* Sign up for an account
+* Create or join a book club
+* Search for a book, and add it to your club's reading list!
+* Save your notes as you read the book!
+
+![image](https://docs.google.com/drawings/d/1GTO2ZBhXhfXwarPFsBHKJykgrV3vdNx8vI-jyqMrplA/pub?w=500&h=350)
+
+**Tech stack**: Ruby-on-Rails, PostgreSQL, Amazon's Goodreads API, Devise gem, HTML, CSS
+
+// Started by @omarchaeopteryx, 2017
+
 ***
